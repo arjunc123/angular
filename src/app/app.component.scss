@@ -1,0 +1,41 @@
+
+$colour : (
+    primary : rgb(255, 255, 255),
+    banner : rgb(154, 104, 248),
+);
+$padding : 15px;
+@function color($col) {
+    @return map-get($colour,$col);  
+} 
+*{
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+    box-sizing: border-box;
+}
+.nav{
+    background-color: color(banner);
+    display: flex;
+    position: relative;
+    h1{
+        text-transform: uppercase;
+        // padding: 15px 15Px 15px 15px;
+        margin: 15px 15px 15px 15px;
+    }
+    .check{
+        position: absolute;
+        top:15px;
+        right:15px;
+        background-color: color(primary);
+        padding: 10px 20px 10px 20px;
+        border-radius: 10%;
+        text-decoration: none;
+        border: 0px;
+        // margin: 15px 15px 15px 15px;
+        
+    }
+    .check:hover{
+        background-color: rgb(201, 179, 141);
+    }
+
+}
